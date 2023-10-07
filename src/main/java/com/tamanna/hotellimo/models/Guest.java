@@ -1,104 +1,36 @@
 package com.tamanna.hotellimo.models;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Setter
+@Getter
 @Table(name="Guest")
+
 public class Guest {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "GUEST_ID")
     private Long id;
     @Column(name="FIRST_NAME")
-    private String FIRST_NAME;
+    private String firstName ;
     @Column(name="LAST_NAME")
-    private String LAST_NAME;
+    private String lastName;
     @Column(name="EMAIL_ADDRESS")
-    private String EMAIL_ADDRESS;
+    private String emaliAddress;
     @Column(name="ADDRESS")
-    private String ADDRESS;
+    private String address;
     @Column(name="COUNTRY")
-    private String COUNTRY;
+    private String country;
     @Column(name="STATE")
-    private String STATE;
+    private String state;
     @Column(name="PHONE_NUMBER")
-    private String PHONE_NUMBER;
+    private String phoneNumber;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
-    public String getFIRST_NAME() {
-        return FIRST_NAME;
-    }
 
-    public void setFIRST_NAME(String FIRST_NAME) {
-        this.FIRST_NAME = FIRST_NAME;
-    }
-
-    public String getLAST_NAME() {
-        return LAST_NAME;
-    }
-
-    public void setLAST_NAME(String LAST_NAME) {
-        this.LAST_NAME = LAST_NAME;
-    }
-
-    public String getEMAIL_ADDRESS() {
-        return EMAIL_ADDRESS;
-    }
-
-    public void setEMAIL_ADDRESS(String EMAIL_ADDRESS) {
-        this.EMAIL_ADDRESS = EMAIL_ADDRESS;
-    }
-
-    public String getADDRESS() {
-        return ADDRESS;
-    }
-
-    public void setADDRESS(String ADDRESS) {
-        this.ADDRESS = ADDRESS;
-    }
-
-    public String getCOUNTRY() {
-        return COUNTRY;
-    }
-
-    public void setCOUNTRY(String COUNTRY) {
-        this.COUNTRY = COUNTRY;
-    }
-
-    public String getSTATE() {
-        return STATE;
-    }
-
-    public void setSTATE(String STATE) {
-        this.STATE = STATE;
-    }
-
-    public String getPHONE_NUMBER() {
-        return PHONE_NUMBER;
-    }
-
-    public void setPHONE_NUMBER(String PHONE_NUMBER) {
-        this.PHONE_NUMBER = PHONE_NUMBER;
-    }
-
-    @Override
-    public String toString() {
-        return "Guest{" +
-                "id=" + id +
-                ", FIRST_NAME='" + FIRST_NAME + '\'' +
-                ", LAST_NAME='" + LAST_NAME + '\'' +
-                ", EMAIL_ADDRESS='" + EMAIL_ADDRESS + '\'' +
-                ", ADDRESS='" + ADDRESS + '\'' +
-                ", COUNTRY='" + COUNTRY + '\'' +
-                ", STATE='" + STATE + '\'' +
-                ", PHONE_NUMBER='" + PHONE_NUMBER + '\'' +
-                '}';
-    }
 }

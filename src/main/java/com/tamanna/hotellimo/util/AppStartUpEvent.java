@@ -26,7 +26,7 @@ public class AppStartUpEvent implements ApplicationListener<ApplicationReadyEven
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {
-        Date date=this.dateUtils.createDateFromDateString("2023-01-01");
+        Date date=this.dateUtils.createDateFromDateString("2022-01-01");
         List<RoomReservation> roomReservationList=this.reservationService.getRoomReservationForDate(date);
 
        /* Iterable<Room> rooms=this.roomRepository.findAll();

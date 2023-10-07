@@ -1,8 +1,12 @@
 package com.tamanna.hotellimo.models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 @Table(name="ROOM")
 public class Room
 {
@@ -17,45 +21,5 @@ public class Room
     @Column(name="BED_INFO")
     private String bedInfo;
 
-    public long getId() {
-        return id;
-    }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public String getRoomNumber() {
-        return roomNumber;
-    }
-
-    public void setRoomNumber(String roomNumber) {
-        this.roomNumber = roomNumber;
-    }
-
-    public String getBedInfo() {
-        return bedInfo;
-    }
-
-    public void setBedInfo(String bedInfo) {
-        this.bedInfo = bedInfo;
-    }
-
-    @Override
-    public String toString() {
-        return "Room{" +
-                "id=" + id +
-                ", Name='" + Name + '\'' +
-                ", roomNumber='" + roomNumber + '\'' +
-                ", bedInfo='" + bedInfo + '\'' +
-                '}';
-    }
 }
