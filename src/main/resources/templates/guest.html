@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>GuestList</title>
+</head>
+<body>
+<h1> Welcome to the reservation</h1>
+<table>
+    <tr>
+        <th>LastName</th>
+        <th>First Name</th>
+        <th>Email Address</th>
+        <th>Phone Number</th>
+
+    </tr>
+
+    <tr th:each="guest:${guestList}">
+        <td th:text="${guest.lastName}">LastName</td>
+        <td th:text="${guest.firstName}">First Name</td>
+        <td th:text="${guest.emailAddress}"></td>
+        <td th:text="${guest.phoneNumber}"></td>
+
+    </tr>
+
+
+</table>
+</body>
+</html>

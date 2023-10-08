@@ -20,7 +20,7 @@ public class Guest {
     @Column(name="LAST_NAME")
     private String lastName;
     @Column(name="EMAIL_ADDRESS")
-    private String emaliAddress;
+    private String emailAddress;
     @Column(name="ADDRESS")
     private String address;
     @Column(name="COUNTRY")
