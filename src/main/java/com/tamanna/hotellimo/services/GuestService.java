@@ -26,4 +26,19 @@ public class GuestService {
         return guestList;
 
     }
+
+
+
+    public Guest createGuest(Guest guest) {
+        Guest guests=new Guest();
+        guests.setLastName(guest.getLastName());
+        guests.setFirstName(guest.getFirstName());
+        guests.setAddress(guest.getAddress());
+        guests.setEmailAddress(guest.getEmailAddress());
+        guests.setCountry(guest.getCountry());
+        guests.setState(guest.getState());
+        guests.setPhoneNumber(guest.getPhoneNumber());
+        //guests
+        return guestRepository.save(guest);
+    }
 }
